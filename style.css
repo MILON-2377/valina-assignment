@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 20px;
+}
+
+/* login container */
+.login-container {
+  width: 50%;
+  height: 100%;
+}
+
+/* header container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* enroll btn container */
+.enl-btn-ctner{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+
+.enl-btn-ctner p {
+    font-size: 16px;
+    color: rgb(162, 157, 157);
+}
+
+.enroll-btn {
+  padding: 7px 10px;
+  border: 1px solid rgb(204, 202, 202);
+  border-radius: 24px;
+  background-color: transparent;
+  color: rgb(34, 183, 133);
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.enroll-btn:hover {
+  cursor: pointer;
+  background-color: rgb(36, 233, 168);
+  color: white;
+  border: none;
+  font-weight: 550;
+}
+
+
+/* popup menu container  */
+.popup-menu {
+    position: absolute;
+    top: 10%;
+    right: 51%;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 16px;
+}
+
+.menu-icon {
+    position: absolute;
+    top: -11.4%;
+    right: 15%;
+    rotate: 180deg;
+}
+
+.popup-menu i {
+   color: black;
+   font-size: 32px;
+}
+
+.popup-menu p{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.popup-menu ul {
+    list-style: none;
+    margin-top: 8px;
+}
+
+
+
+.popup-menu ul li{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.popup-menu ul li i{
+    font-size: 20px;
+    color: rgb(193, 247, 193);
+}
+
+/* logo container */
+.logo-container {
+  display: flex;
+  gap: 5px;
+}
+
+/* image container styles */
+.img-container {
+  width: 50%;
+  height: 100vh;
+  border-radius: 16px;
+}
+
+.img-container img {
+  border-radius: 16px;
+  object-fit: cover;
+}
