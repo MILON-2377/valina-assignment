@@ -57,6 +57,7 @@ body {
 /* popup menu container  */
 .popup-menu {
     position: absolute;
+    display: none;
     top: 10%;
     right: 51%;
     padding: 15px;
