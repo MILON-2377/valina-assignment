@@ -15,19 +15,25 @@
   </head>
   <body>
     <!-- login section -->
-    <section class="login-container">
+    <section id="login-main" class="login-container">
       <!-- header and logo section -->
       <section class="header-container">
         <div class="logo-container">
-          <img src="" alt="logo" />
-          <div>
+          <div id="logo-img-container">
+            <img
+              id="logo-img"
+              src="./images/Gemini_Generated_Image_kyemaikyemaikyem.jpg"
+              alt="logo"
+            />
+          </div>
+          <div id="logo-title">
             <h1>REGIONS</h1>
             <p>Mortgage</p>
           </div>
         </div>
 
         <!-- enroll section -->
-        <div class="enl-btn-ctner">
+        <div id="enl-btn-cntnr" class="enl-btn-ctner">
           <p>Are you a new customer?</p>
           <button class="enroll-btn">Enroll Now</button>
         </div>
@@ -58,10 +64,61 @@
           </ul>
         </div>
       </section>
+
+      <!-- login form section -->
+      <div id="log-in-container">
+        <p class="login-title">Welcome back</p>
+        <p class="login-sub-title">
+          Sign in to your Regions Mymortgage account
+        </p>
+
+        <form id="form">
+          <div id="id-container" class="id-container">
+            <p id="id-title" class="id-title" style="display: none">
+              Online Id
+            </p>
+            <input
+              id="online-id"
+              class="online-id"
+              type="text"
+              name="online-id"
+              placeholder="Online Id"
+            />
+          </div>
+          <div id="pass-container" class="id-container">
+            <p id="pass-title" class="id-title" style="display: none">
+              Password
+            </p>
+            <input
+              id="pass-input"
+              class="online-id"
+              type="password"
+              name="pass"
+              placeholder="Password"
+            />
+          </div>
+          <div class="checkbox">
+            <input id="check-input" type="checkbox" />
+            <span>Remember me</span>
+          </div>
+          <button id="submit" class="submit-btn">
+            <div id="loader-container" style="display: none">
+              <div id="loader" class="loader-spin"></div>
+            </div>
+            <span id="btn-title">LogIn</span>
+          </button>
+        </form>
+
+        <!-- forgot section -->
+        <div class="forgot">
+          <p>Forgot online Id?</p>
+          <p>Forgot password?</p>
+        </div>
+      </div>
     </section>
 
     <!-- image section -->
-    <section class="img-container">
+    <section id="img-container" class="img-container">
       <img
         src="./images//photo-1625602812206-5ec545ca1231.jpg"
         alt="hosue"
@@ -71,6 +128,6 @@
     </section>
 
     <!-- script -->
-     <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

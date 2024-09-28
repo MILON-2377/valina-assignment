@@ -23,16 +23,15 @@ body {
 }
 
 /* enroll btn container */
-.enl-btn-ctner{
-    display: flex;
-    gap: 12px;
-    align-items: center;
+.enl-btn-ctner {
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
-
 .enl-btn-ctner p {
-    font-size: 16px;
-    color: rgb(162, 157, 157);
+  font-size: 16px;
+  color: rgb(162, 157, 157);
 }
 
 .enroll-btn {
@@ -50,56 +49,71 @@ body {
   background-color: rgb(36, 233, 168);
   color: white;
   border: none;
-  font-weight: 550;
 }
 
+.enrol-btn-animation {
+  animation: enrolBtnAnimate 0.5s linear;
+}
+
+@keyframes enrolBtnAnimate {
+  0% {
+    opacity: 1;
+    transform: translateY(2%);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(10%);
+    opacity: 0;
+    display: none;
+  }
+}
 
 /* popup menu container  */
 .popup-menu {
-    position: absolute;
-    display: none;
-    top: 10%;
-    right: 51%;
-    padding: 15px;
-    background-color: black;
-    color: white;
-    border-radius: 16px;
+  position: absolute;
+  display: none;
+  top: 10%;
+  right: 51%;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  border-radius: 16px;
 }
 
 .menu-icon {
-    position: absolute;
-    top: -11.4%;
-    right: 15%;
-    rotate: 180deg;
+  position: absolute;
+  top: -11.4%;
+  right: 15%;
+  rotate: 180deg;
 }
 
 .popup-menu i {
-   color: black;
-   font-size: 32px;
+  color: black;
+  font-size: 32px;
 }
 
-.popup-menu p{
-    font-size: 18px;
-    font-weight: 700;
+.popup-menu p {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .popup-menu ul {
-    list-style: none;
-    margin-top: 8px;
+  list-style: none;
+  margin-top: 8px;
 }
 
-
-
-.popup-menu ul li{
-    margin-top: 5px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.popup-menu ul li {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.popup-menu ul li i{
-    font-size: 20px;
-    color: rgb(193, 247, 193);
+.popup-menu ul li i {
+  font-size: 20px;
+  color: rgb(193, 247, 193);
 }
 
 /* logo container */
@@ -108,14 +122,387 @@ body {
   gap: 5px;
 }
 
+.login-container img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 5px;
+}
+
+.logo-img-animate {
+  position: absolute;
+  animation: logoImgAnimate 0.6s linear forwards;
+}
+
+@keyframes logoImgAnimate {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(25vw, 25vh) rotate(360deg);
+  }
+  100% {
+    transform: translate(50vw, 50vh) rotate(0);
+  }
+}
+
+.logo-img-animate-after {
+  transform: scale(-0.1);
+  transition: transform 0.5s ease;
+}
+
+.logo-title-container-animation {
+  z-index: 0.5;
+  animation: logoTitlAnimate 0.3s linear forwards;
+}
+
+@keyframes logoTitlAnimate {
+  0% {
+    opacity: 0.8;
+    transform: translateX(-10%);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.logo-container-animate {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+  border-radius: 50%;
+  top: 50vh;
+  left: 50vw;
+  background-color: white;
+  animation: shrinkLogo 0.5s forwards;
+}
+
+@keyframes shrinkLogo {
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.logo {
+    position: relative;
+    top: 20%;
+    left: 20%;
+    width: 30px;
+    height: 30px;
+    animation: logoShirink 0.8s forwards;
+  }
+
+  @keyframes logoShirink {
+    0%{
+        transform: scale(-0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+  }
+
+
+  .animate-logo{
+    position: absolute;
+    animation: lastLogoShrink 0.8s linear;
+  }
+
+  @keyframes lastLogoShrink {
+    0%{
+        transform: translate(-10vw,-10vh);
+    }
+    100%{
+        transform: translate(-50vw,-50vh);
+    }
+  }
+
 /* image container styles */
 .img-container {
   width: 50%;
   height: 100vh;
   border-radius: 16px;
+  transition: transform 0.6s ease;
 }
 
 .img-container img {
   border-radius: 16px;
   object-fit: cover;
+}
+
+.img-ctn-animate {
+  animation: imgShrink 0.7s forwards;
+}
+
+@keyframes imgShrink {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.01);
+  }
+}
+
+.img-shring-after-animate {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+  animation: imgAnimateAgain 0.5s linear forwards;
+}
+
+@keyframes imgAnimateAgain {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: scale(1);
+  }
+}
+
+.final-img-container-animate {
+    animation: animateImg 0.5s linear;
+}
+
+@keyframes animateImg {
+    0%{
+        width: 90vw;
+        height: 100vh;
+    }
+    50%{
+        width: 70vw;
+    }
+    100%{
+        width: 50vw;
+    }
+}
+
+
+/* login form section */
+.login-title {
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.login-sub-title {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 16px;
+  color: rgb(126, 121, 121);
+}
+
+/* input field */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.id-container {
+  height: 38px;
+  width: 50%;
+  border: 1px solid gainsboro;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.active-id-container {
+  flex-direction: column;
+  align-items: normal;
+  gap: 5px;
+  border: 1px solid rgb(16, 241, 99);
+}
+
+.id-container p {
+  font-size: 17px;
+  font-weight: 480;
+}
+
+.active-p {
+  display: block;
+  color: aqua;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.online-id {
+  border: none;
+  font-size: 16px;
+  width: 100%;
+}
+
+.online-id:focus {
+  outline: none;
+}
+
+.online-id::placeholder {
+  font-size: 16px;
+  font-weight: 450;
+}
+
+.form-animate {
+  animation: formAnimate 0.6s ease-in-out forwards;
+}
+
+@keyframes formAnimate {
+  0% {
+    transform: translateY(3%);
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.7;
+    transform: translateY(6%);
+  }
+  60% {
+    opacity: 0.5;
+    transform: translateY(8%);
+  }
+  100% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+}
+
+/* submit btn container */
+.submit-btn {
+  position: relative;
+  border: none;
+  border-radius: 24px;
+  background-color: rgb(195, 191, 191);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px;
+  width: 50%;
+  height: 45px;
+  color: ghostwhite;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.submit-btn:active {
+  transform: scale(0.9);
+  background-color: rgb(18, 212, 18);
+}
+
+.active-submit-btn {
+  background-color: rgb(18, 181, 18);
+  color: white;
+}
+
+.btn-title-hide {
+  position: absolute;
+  top: 30%;
+  transform: translateX(300%);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.2s ease;
+}
+
+/* checkbox container */
+.checkbox {
+  width: 53%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkbox input {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border: 1px solid rgb(209, 206, 206);
+  border-radius: 4px;
+  color: greenyellow;
+  outline: none;
+  position: relative;
+}
+
+.checkbox input:checked {
+  border-color: white;
+  border: 1px solid rgb(40, 219, 40);
+  outline: none;
+}
+
+.checkbox input:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  width: 6px;
+  height: 10px;
+  border: solid rgb(28, 242, 113);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox span {
+  font-size: 16px;
+}
+
+/* loading spin container */
+.loader-spin {
+  border: 2px solid green;
+  border-left-color: white;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-container-animation {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: translateX(400%);
+    left: 30%;
+    transition: transform 0.3ss ease;
+}
+
+
+
+/* forgot section */
+.forgot {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.forgot p {
+    width: 100%;
+    text-align: center;
+    color: rgb(28, 180, 28);
 }
